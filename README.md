@@ -1,2 +1,2 @@
-# lab_management
-This repository was created with the aim of efficiently managing laboratory-related works.
+# Lab_management
+This repository was created to efficiently manage laboratory-related work.
