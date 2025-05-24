@@ -47,16 +47,16 @@ def decimal_to_hour_minute(decimal_value):
     return hours, minutes
 
 # Streamlit app layout
-    st.title('Working Hours Calculator')
+st.title('Working Hours Calculator')
 
-    year = st.number_input('Year:', min_value=1900, max_value=2100, step=1)
-    hours_per_day = st.number_input('Hours/day:', min_value=0.0, step=0.1)
-    days_off = st.number_input('Days off:', min_value=0.0, step=0.1)
+year = st.number_input('Year:', min_value=1900, max_value=2100, step=1)
+hours_per_day = st.number_input('Hours/day:', min_value=0.0, step=0.1)
+days_off = st.number_input('Days off:', min_value=0.0, step=0.1)
 
-    if st.button('Calculate'):
-        if not all([year, hours_per_day, days_off]):
-             st.write('Please fill in all input fields.')
-        else:
+if st.button('Calculate'):
+    if not all([year, hours_per_day, days_off]):
+            st.write('Please fill in all input fields.')
+    else:
             saturdays, sundays = count_saturdays_and_sundays(year)
             working_hours, working_hours_no_sat_sun = calculate_working_hours(year, hours_per_day, days_off, saturdays, sundays)
 
