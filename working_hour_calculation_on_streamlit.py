@@ -54,7 +54,7 @@ def decimal_to_hour_minute(decimal_value):
     days_off = st.number_input('Days off:', min_value=0.0, step=0.1)
 
     if st.button('Calculate'):
-        if not all([year, hours_per_per_day, days_off]):
+        if not all([year, hours_per_day, days_off]):
              st.write('Please fill in all input fields.')
         else:
             saturdays, sundays = count_saturdays_and_sundays(year)
