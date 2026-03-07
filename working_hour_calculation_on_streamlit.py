@@ -51,7 +51,7 @@ def decimal_to_hour_minute(decimal_value):
 st.title('Working Hours Calculator')
 
 year = st.number_input('Year:', min_value=1900, max_value=2100, step=1)
-hours_per_day = st.number_input('Hours/day:', min_value=0.0, step=0.1)
+hours_per_day = st.number_input('Working Hours/day:', min_value=0.0, step=0.1)
 days_off = st.number_input('Total Leave & Holidays (Mon–Fri only):', min_value=0.0, step=0.1)
 
 if st.button('Calculate'):
